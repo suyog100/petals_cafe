@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import headerLogo from "../assets/images/logo/logo2.png";
+import headerLogo from "../assets/images/logo/logo3.png";
 
 import { Link, useNavigate } from "react-router-dom";
 
