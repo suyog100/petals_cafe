@@ -1,27 +1,27 @@
-import React, { useEffect, useState } from "react";
-import "../assets/js/custom.js";
-import WOW from "wowjs";
-import "wowjs/css/libs/animate.css";
-import headerLogo from "../assets/images/logo/logo.png";
-import food from "../assets/images/svg/food.svg";
-import foodList from "../assets/images/svg/food-list.svg";
-import chef from "../assets/images/svg/chef.svg";
-import foodVideo from "../assets/video/food_video.mp4";
-import "swiper/swiper-bundle.css";
-import "swiper/css/free-mode";
-import $ from "jquery";
-import Sidebar from "./Sidebar.jsx";
-import BlogModal from "./blog/BlogModal.jsx";
-import ChefModal from "./chef/ChefModal.jsx";
-import SliderSection from "./home/SliderSection.jsx";
-import AboutSection from "./home/AboutSection.jsx";
-import TeamSection from "./home/TeamSection.jsx";
-import MenuSection from "./home/MenuSection.jsx";
-import ReservationSection from "./home/ReservationSection.jsx";
-import GallerySection from "./home/GallerySection.jsx";
-import BlogBox from "./blog/BlogBox.jsx";
-import Footer from "./Footer.jsx";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import '../assets/js/custom.js';
+import WOW from 'wowjs';
+import 'wowjs/css/libs/animate.css';
+import headerLogo from '../assets/images/logo/logo2.png';
+import food from '../assets/images/svg/food.svg';
+import foodList from '../assets/images/svg/food-list.svg';
+import chef from '../assets/images/svg/chef.svg';
+import foodVideo from '../assets/video/food_video.mp4';
+import 'swiper/swiper-bundle.css';
+import 'swiper/css/free-mode';
+import $ from 'jquery';
+import Sidebar from './Sidebar.jsx';
+import BlogModal from './blog/BlogModal.jsx';
+import ChefModal from './chef/ChefModal.jsx';
+import SliderSection from './home/SliderSection.jsx';
+import AboutSection from './home/AboutSection.jsx';
+import TeamSection from './home/TeamSection.jsx';
+import MenuSection from './home/MenuSection.jsx';
+import ReservationSection from './home/ReservationSection.jsx';
+import GallerySection from './home/GallerySection.jsx';
+import BlogBox from './blog/BlogBox.jsx';
+import Footer from './Footer.jsx';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   const [visible, setVisible] = useState(true);
@@ -33,11 +33,11 @@ const Home = () => {
       $(document).ready(function () {
         var target = window.location.hash;
         if (target) {
-          $("html, body").animate(
+          $('html, body').animate(
             {
               scrollTop: $(target).offset()?.top,
             },
-            "slow",
+            'slow',
           );
         }
       });
@@ -49,7 +49,7 @@ const Home = () => {
   useEffect(() => {
     const wow = new WOW.WOW({ live: false });
     let scrolled = false;
-    $(window).on("scroll", () => {
+    $(window).on('scroll', () => {
       if (!scrolled) {
         scrolled = true;
         wow.init();
@@ -68,9 +68,9 @@ const Home = () => {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -99,7 +99,7 @@ const Home = () => {
           {/* start content */}
           <div className="foholic_content">
             {/* mobile menu */}
-            <div className={`mobile_header ${isSticky ? "sticky" : ""}`}>
+            <div className={`mobile_header ${isSticky ? 'sticky' : ''}`}>
               <div className="inn-sub-header">
                 <div className="logo" id="logo">
                   <Link to="/">
@@ -131,7 +131,7 @@ const Home = () => {
             <section
               className="foholic-history"
               id="about"
-              style={{ textAlign: "start" }}
+              style={{ textAlign: 'start' }}
             >
               <AboutSection />
             </section>
@@ -279,7 +279,7 @@ const Home = () => {
             <section
               className="foholic_menu"
               id="menu"
-              style={{ textAlign: "start" }}
+              style={{ textAlign: 'start' }}
             >
               <MenuSection />
             </section>
@@ -289,7 +289,7 @@ const Home = () => {
             <section
               className="foholic_reservation"
               id="reservation"
-              style={{ textAlign: "start" }}
+              style={{ textAlign: 'start' }}
             >
               <div className="parallax-overlay"></div>
               <h6 className="d-none">hidden</h6>
@@ -364,7 +364,7 @@ const Home = () => {
             <section
               className="newsletter-part"
               id="news-letter"
-              style={{ textAlign: "start" }}
+              style={{ textAlign: 'start' }}
             >
               <div className="container">
                 <h3 className="d-none">hidden</h3>
@@ -502,7 +502,7 @@ const Home = () => {
             id="staticBackdrop"
             tabIndex="-2"
             aria-hidden="true"
-            style={{ textAlign: "start" }}
+            style={{ textAlign: 'start' }}
           >
             <BlogModal />
           </div>
@@ -513,7 +513,7 @@ const Home = () => {
             id="staticBackdropteam"
             tabIndex="-1"
             aria-hidden="true"
-            style={{ textAlign: "start" }}
+            style={{ textAlign: 'start' }}
           >
             <ChefModal />
           </div>
